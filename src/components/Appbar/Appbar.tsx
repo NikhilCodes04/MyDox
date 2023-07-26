@@ -1,15 +1,19 @@
 import * as React from 'react';
+
 import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem, Input } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
 
 const pages = ['File', 'Edit', 'View', 'Insert', 'Format', 'Tools', 'Extensions', 'Help'];
+
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
     const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(null);
+
     const [fileName, setFileName] = React.useState('Untitled Document');
+
     const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget);
     };
@@ -101,7 +105,9 @@ function ResponsiveAppBar() {
                             textDecoration: 'none',
                         }}
                     >
+
                         MyDox
+
                     </Typography>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
@@ -113,6 +119,7 @@ function ResponsiveAppBar() {
                                 {page}
                             </Button>
                         ))}
+
                         <Input
                             value={fileName} // Set the default value
                             onChange={(e) => setFileName(e.target.value)}
@@ -123,6 +130,7 @@ function ResponsiveAppBar() {
                                     outline: 'none', // Remove the default outline
                                 },
                             }} />
+
                     </Box>
 
                     <Box sx={{ flexGrow: 0 }}>
@@ -154,9 +162,11 @@ function ResponsiveAppBar() {
                             ))}
                         </Menu>
 
+
                     </Box>
                 </Toolbar>
             </Container>
+
 
         </AppBar>
     );
