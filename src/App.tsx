@@ -9,10 +9,8 @@ function App() {
   return (
     <>
       <ResponsiveAppBar/>
-
       <br/>
       <DocPage/>
-
     </>
   )
 }
