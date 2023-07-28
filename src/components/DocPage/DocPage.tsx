@@ -23,42 +23,7 @@
 //         </div>
 //     );
 // }
-// import { useState,ChangeEvent } from 'react';
-// import { Input, Paper } from '@mui/material';
 
-// export default function DocPage() {
-//     const [lines, setLines] = useState(1);
-
-//     const handleInputChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
-//         // Calculate the number of lines based on the input content
-//         const inputText = event.target.value;
-//         const lineBreaks = inputText.split('\n').length;
-//         setLines(lineBreaks);
-//     };
-
-//     const createNextPage = () => {
-//         // Render a new DocPage component to append to the current page
-//         return <DocPage />;
-//     };
-
-//     return (
-//         <div style={{ display: 'flex', justifyContent: 'center' }}>
-//             <Paper className='doc' sx={{ width: '595px', height: '892px' }}>
-//                 <Input
-//                     multiline
-//                     disableUnderline
-//                     onChange={handleInputChange}
-//                     sx={{
-//                         margin: '20px',
-//                         width: '90%',
-//                         maxHeight: '100%',
-//                     }}
-//                 />
-//             </Paper>
-//             {lines > 36 && createNextPage()}
-//         </div>
-//     );
-// }
 import { useState, ChangeEvent } from 'react';
 import { Input, Paper } from '@mui/material';
 
